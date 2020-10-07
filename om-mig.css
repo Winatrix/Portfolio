@@ -1,0 +1,234 @@
+html, body {
+  margin: 0;
+  background: #cce0ff;
+  font-family: sans-serif;
+  width: 1500px;
+  height: 700px;
+  min-width: 800;
+
+
+}
+
+:root {
+  --background: rgba(51, 102, 255, .85);
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+.content {
+  height: 200vh;
+  background-color: #333;
+  background-blend-mode: multiply;
+  background-size: cover;
+  display: grid;
+  place-items: center;
+}
+
+/*navigation styles start*/
+header {
+  background: var(--background);
+  text-align: center;
+  position: fixed;
+  z-index: 999;
+  width: 100%;
+  padding-bottom: 10px;
+}
+
+.logo {
+  margin-top: 10px;
+}
+
+.nav-toggle {
+  display: none;
+}
+
+.nav-toggle-label {
+  position: absolute;
+  top: 0;
+  left: 0;
+  margin-left: 1em;
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.nav-toggle-label span,
+.nav-toggle-label span::before,
+.nav-toggle-label span::after {
+  display: block;
+  background: white;
+  height: 2px;
+  width: 2em;
+  border-radius: 2px;
+  position: relative;
+}
+
+.nav-toggle-label span::before,
+.nav-toggle-label span::after {
+  content: '';
+  position: absolute;
+}
+
+.nav-toggle-label span::before {
+  bottom: 7px;
+}
+
+.nav-toggle-label span::after {
+  top: 7px;
+}
+
+nav {
+  position: absolute;
+  text-align: left;
+  top: 100%;
+  left: 0;
+  background: var(--background);
+  width: 100%;
+  transform: scale(1, 0);
+  transform-origin: top;
+  transition: transform 400ms ease-in-out;
+}
+
+nav ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+nav li {
+  margin-bottom: 1em;
+  margin-left: 1em;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  font-size: 1.2rem;
+  text-transform: uppercase;
+  opacity: 0;
+  transition: opacity 150ms ease-in-out;
+}
+
+nav a: hover {
+  color: #000;
+}
+
+.nav-toggle:checked~nav {
+  transform: scale(1, 1);
+}
+
+.nav-toggle:checked~nav a {
+  opacity: 1;
+  transition: opacity 250ms ease-in-out 250ms;
+}
+
+.anime {
+  position: absolute;
+  right: 0;
+  top: 120px;
+}
+
+.text-anime {
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+  background-color: rgba(51, 102, 255, .85);
+  color: white;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.gaming {
+  position: absolute;
+  right: 330px;
+  top: 120px;
+}
+
+.text-gaming {
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+  background-color: rgba(51, 102, 255, .85);
+  color: white;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.music {
+  position: absolute;
+  right: 330px;
+  top: 450px;
+}
+
+.text-music {
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+  background-color: rgba(51, 102, 255, .85);
+  color: white;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.collecting {
+  position: absolute;
+  right: 0;
+  top: 450px;
+}
+
+.text-collecting {
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+  background-color: rgba(51, 102, 255, .85);
+  color: white;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.info {
+  position: absolute;
+  top: 80px;
+  left: 10px;
+  background-color: rgba(51, 102, 255, .85);
+  color: white;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+h2 {
+  color: black;
+}
+
+h4 {
+  color: black;
+}
+
+p {
+  color: black;
+}
+
+.cv {
+  position: absolute;
+  margin-left: 10px;
+  top: 280px;
+}
+
+.cv-billede {
+  position: absolute;
+  left: 360px;
+  top: 80px;
+}
+
+h1 {
+  position: absolute;
+  text-align: center;
+  top: 50px;
+  right: 572px;
+  background-color: rgba(51, 102, 255, .85);
+  padding: 5px;
+  padding-left: 10px;
+  padding-right: 10px;
+}
